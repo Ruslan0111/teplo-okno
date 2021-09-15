@@ -69,3 +69,39 @@
   font-style: normal;
   font-display: swap;
 }
+
+.rt {
+  &-light {
+    font-family: 'Roboto-Light';
+    font-weight: 300;
+  }
+  &-regular {
+    font-family: 'Roboto-Regular';
+    font-weight: normal;
+  }
+  &-italic {
+    font-family: 'Roboto-Italic';
+    font-weight: normal;
+  }
+  &-medium {
+    font-family: 'Roboto-Medium';
+    font-weight: 500;
+  }
+  &-bold {
+    font-family: 'Roboto-Bold';
+    font-weight: bold;
+  }
+  &-bold-italic {
+    font-family: 'Roboto-BoldItalic';
+    font-weight: bold;
+  }
+  &-black {
+    font-family: 'Roboto-Black';
+    font-weight: 900;
+  }
+}
+
+.us-black {
+  font-family: 'UniSansHeavyCAPS';
+  font-weight: 900;
+}

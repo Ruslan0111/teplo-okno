@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon/icomoon.eot?ms6bc5');
+  src:  url('../fonts/icomoon/icomoon.eot?ms6bc5#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon/icomoon.ttf?ms6bc5') format('truetype'),
+    url('../fonts/icomoon/icomoon.woff?ms6bc5') format('woff'),
+    url('../fonts/icomoon/icomoon.svg?ms6bc5#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-in:before {
+  content: "\e900";
+}
+.icon-vk:before {
+  content: "\e901";
+}
+.icon-alarm:before {
+  content: "\e902";
+  color: #fff;
+}
+.icon-book:before {
+  content: "\e903";
+  color: #fff;
+}
+.icon-email:before {
+  content: "\e904";
+  color: #2f6dce;
+}
+.icon-globe:before {
+  content: "\e905";
+  color: #2f6dce;
+}
+.icon-home:before {
+  content: "\e906";
+  color: #2f6dce;
+}
+.icon-group:before {
+  content: "\e907";
+  color: #2f6dce;
+}
+.icon-close:before {
+  content: "\e908";
+  color: #e05c5c;
+}
+.icon-check:before {
+  content: "\e909";
+  color: #25cf43;
+}
+.icon-arrow-left:before {
+  content: "\e90a";
+}
+.icon-arrow-right:before {
+  content: "\e90b";
+}
+.icon-check-stroke:before {
+  content: "\e90c";
+  color: #2f6dce;
+}
+.icon-danger:before {
+  content: "\e90d";
+  color: #e05c5c;
+}
+.icon-phone:before {
+  content: "\e90e";
+  color: #2f6dce;
+}
+.icon-location:before {
+  content: "\e90f";
+  color: #6f6f6f;
+}
+.icon-whatsapp:before {
+  content: "\e910";
+  color: #25cf43;
+}

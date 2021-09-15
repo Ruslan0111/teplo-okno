@@ -1,8 +1,108 @@
 @import "../libs/css/reset";
+@import "../libs/css/icomoon";
 @import "vars";
 @import "fonts";
 @import "global";
 
+.header {
+  padding-top: 30px;
+  position: relative;
 
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 38px;
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 24px;
+    color: $font-color2;
+    font-weight: 400;
+    flex: 0 1 30%;
+  }
+
+  &__top-contacts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0 1 70%;
+    max-width: 755px;
+
+    // li + li {
+    //   margin-left: 47px;
+    // }
+  }
+
+  &__location {
+    max-width: 185px;
+    display: flex;
+    align-items: center;
+
+    .icon-location {
+      font-size: 22px;
+      margin-right: 5px;
+    }
+
+    span:last-child {
+      color: $font-color3;
+    }
+  }
+
+  &__whatsapp {
+    padding: 14px 27px;
+    border: 1px solid #25CF43;
+    border-radius: 84px;
+    display: flex;
+    align-items: center;
+    color: #25CF43;
+
+    .icon-whatsapp {
+      margin-right: 8px;
+    }
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: $font-color1;
+
+    .icon-phone {
+      margin-right: 8px;
+      font-size: 24px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__burger,
+  &__contacts-mobile {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+
+    li {
+      padding: 0 32px;
+    }
+
+    li + li { 
+      border-left: 1px solid #999999;
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+  }
+}
 
 @import "media";
