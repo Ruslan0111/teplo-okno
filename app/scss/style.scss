@@ -1,5 +1,6 @@
 @import "../libs/css/reset";
 @import "../libs/css/icomoon";
+@import "../libs/css/swiper-bundle.min";
 @import "vars";
 @import "fonts";
 @import "global";
@@ -268,7 +269,7 @@
 }
 
 .winter-mode {
-  padding-bottom: 77px;
+  padding-bottom: 90px;
 
   .section-title {
     margin-bottom: 56px;
@@ -278,9 +279,14 @@
     padding-top: 10px;
   }
 
+  .section-slider {
+    background-color: #F9F9F9;;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 77px;
   }
 
   &__left {

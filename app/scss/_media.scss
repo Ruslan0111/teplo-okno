@@ -1,3 +1,29 @@
+@media screen and (max-width: 1300px) {
+  .section-slider {
+    &__inner {
+      max-width: 70%;
+    }
+
+    &__item-right-info {
+      padding-left: 15px;
+    }
+
+    &__item-right-price {
+      span {
+        font-size: 30px;
+      }
+    }
+
+    &__button-next {
+      right: 7%;
+    }
+
+    &__button-prev {
+      left: 7%;
+    }
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .header {
     &__title {
@@ -175,6 +201,24 @@
       line-height: 20px;
     }
   }
+
+  .section-slider {
+    &__item-right {
+      display: block;
+    }
+
+    &__item-right-price {
+      padding: 14px;
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-top: 0;
+        display: inline;
+        margin-left: 5px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 768px)  {
@@ -203,6 +247,12 @@
     &__left {
       margin-bottom: 20px;
     }
+  }
+
+  .section-slider__item-right-info p {
+    font-size: 25px;
+    line-height: 30px;
+    margin-left: 20px;
   }
 }
 
@@ -301,6 +351,85 @@
   .winter-mode {
     .section-title {
       margin-bottom: 22px;
+    }
+  }
+
+  .section-slider {
+    padding: 30px 0 80px 0;
+
+    &__title {
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 20px;
+    }
+
+    &__inner {
+      box-shadow: 0px 13px 17px rgba(0, 0, 0, 0.25);
+      max-width: 100%;
+    }
+
+    &__item-left {
+      width: 35px;
+
+      span {
+        top: 65%;
+        left: 8px;
+        font-size: 22px;
+        line-height: 22px;
+      }
+    }
+
+    &__item-img {
+      flex: 0 1 40%;
+    }
+
+    &__item-right-info {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    &__item-right-info p {
+      font-size: 18px;
+      line-height: 24px;
+      margin-left: 15px;
+    }
+
+    &__item-right-price {
+      span {
+        font-size: 21px;
+        line-height: 24px;
+      }
+    }
+
+    &__button-next,
+    &__button-prev {
+      top: auto;
+      transform: none;
+      bottom: -46px;
+      z-index: 50;
+    }
+
+    .swiper-pagination {
+      bottom: -42px;
+    }
+
+    .swiper-pagination-bullet {
+      padding: 0;
+      width: 24px;
+      height: 8px;
+      border-radius: 6px;
+      box-shadow: 0px 22px 44px -12px rgba(255, 57, 57, 0.69);
+      background-color: $color-red;
+      margin: 0 5px !important;
+      span {
+        display: none;
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      background: transparent;
+      border: 1px solid $color-blue;
+      box-shadow: none;
     }
   }
 }
