@@ -107,6 +107,7 @@
 
 .main {
   padding-top: 100px;
+  padding-bottom: 50px;
 
   &__inner {
     display: flex;
@@ -264,6 +265,31 @@
         }
       }
     }
+}
+
+.winter-mode {
+  padding-bottom: 77px;
+
+  .section-title {
+    margin-bottom: 56px;
+  }
+
+  .section-content {
+    padding-top: 10px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left {
+    flex: 0 1 28%;
+  }
+
+  &__right {
+    flex: 0 1 68%;
+  }
 }
 
 @import "media";
