@@ -7,9 +7,10 @@ window.onload = function() {
     document.querySelector('.header__menu').classList.remove('active');
   });
 
-  let menu = ['-10%', '-15%', '-20%', '-35%']
+  let slider1Menu = ['-10%', '-15%', '-20%', '-35%']
+  let slider2Menu = ['-10%', '-10%', '-10%', '-30%', '-30%', '-50%']
 
-  let swiper = new Swiper(".section-slider__inner", {
+  let slider1 = new Swiper(".winter-mode__slider", {
     navigation: {
       nextEl: ".section-slider__button-next",
       prevEl: ".section-slider__button-prev",
@@ -18,7 +19,21 @@ window.onload = function() {
       el: ".swiper-pagination",
       clickable: true,
       renderBullet: function (index, className) {
-        return '<span class="rt-bold ' + className + '"><span>' + (menu[index]) + '</span></span>';
+        return '<span class="rt-bold ' + className + '"><span>' + (slider1Menu[index]) + '</span></span>';
+      },
+    },
+  });
+
+  let slider2 = new Swiper(".big-control__slider", {
+    navigation: {
+      nextEl: ".section-slider__button-next",
+      prevEl: ".section-slider__button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="rt-bold ' + className + '"><span>' + (slider2Menu[index]) + '</span></span>';
       },
     },
   });
