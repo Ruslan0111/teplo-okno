@@ -211,12 +211,36 @@
       padding: 14px;
       display: flex;
       align-items: center;
+      min-height: auto;
 
       span {
         margin-top: 0;
         display: inline;
         margin-left: 5px;
       }
+    }
+  }
+
+  .air-box {
+    &__content-info {
+      padding-top: 0;
+    }
+
+    &__cards-inner {
+      column-gap: 30px;
+    }
+
+    &__card {
+      flex: 0 1 calc(100% / 2 - 15px);
+    }
+
+    &__additional-img {
+      display: none;
+    }
+
+    &__additional-left,
+    &__additional-right {
+      flex: 0 1 48%;
     }
   }
 }
@@ -302,6 +326,20 @@
       grid-column-end: 3;
     }
   }
+
+  .air-box {
+    &__content {
+      display: block;
+    }
+
+    &__content-info {
+      padding-top: 20px;
+    }
+
+    &__additional {
+      display: block;
+    }
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -362,12 +400,19 @@
   .section-title {
     padding: 8px 20px;
 
+    div {
+      padding: 8px 20px;
+    }
+
     &--left {
       clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
     }
 
     &--right {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+      div {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+      }
     }
   }
 
@@ -513,6 +558,66 @@
     &__inner {
       grid-row-gap: 25px;
       margin-bottom: 20px;
+    }
+  }
+
+  .air-box {
+    padding: 60px 0;
+
+    .section-title {
+      padding: 2px;
+      margin-bottom: 20px;
+    }
+
+    &__content {
+      margin-bottom: 40px;
+    }
+
+    &__content-info {
+      p {
+        font-size: 18px;
+        line-height: 22px;
+      }
+
+      li {
+        font-size: 14px;
+        margin-bottom: 12px;
+      }
+    }
+
+    &__cards {
+      margin-bottom: 30px;
+    }
+
+    &__cards-title {
+      font-size: 18px;
+    }
+
+    &__card {
+      flex: 0 1 100%;
+    }
+
+    &__additional {
+      padding: 0 7px;
+    }
+
+    &__additional-left {
+      padding-top: 20px;
+
+      h6 {
+        margin-bottom: 3px;
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      li {
+        font-size: 13px;
+        line-height: 18px;
+      }
+    }
+
+    &__additional-right {
+      text-align: center;
     }
   }
 }

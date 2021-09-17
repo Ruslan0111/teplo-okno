@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon/icomoon.eot?ms6bc5');
-  src:  url('../fonts/icomoon/icomoon.eot?ms6bc5#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon/icomoon.ttf?ms6bc5') format('truetype'),
-    url('../fonts/icomoon/icomoon.woff?ms6bc5') format('woff'),
-    url('../fonts/icomoon/icomoon.svg?ms6bc5#icomoon') format('svg');
+  src:  url('../fonts/icomoon/icomoon.eot?r20sep');
+  src:  url('../fonts/icomoon/icomoon.eot?r20sep#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon/icomoon.ttf?r20sep') format('truetype'),
+    url('../fonts/icomoon/icomoon.woff?r20sep') format('woff'),
+    url('../fonts/icomoon/icomoon.svg?r20sep#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-check1:before {
+  content: "\e910";
+  color: #25cf43;
+}
 .icon-in:before {
   content: "\e900";
 }
@@ -86,6 +90,6 @@
   color: #6f6f6f;
 }
 .icon-whatsapp:before {
-  content: "\e910";
+  content: "\1f312";
   color: #25cf43;
 }
