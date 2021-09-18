@@ -22,6 +22,23 @@
       left: 4%;
     }
   }
+
+  .calc {
+    &__img {
+      left: 52%;
+      width: 400px;
+      height: 410px;
+    }
+
+    &__img img {
+      max-width: 100%;
+    }
+
+    &__img-bg {
+      width: 330px;
+      height: 330px;
+    }
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -241,6 +258,91 @@
     &__additional-left,
     &__additional-right {
       flex: 0 1 48%;
+    }
+  }
+
+  .calc {
+    &__img {
+      display: none;
+    }
+
+    &__img-mobile {
+      z-index: 5;
+      display: block;
+      width: 100%;
+      border-radius: 57px;
+      transform: rotate(-45deg);
+      width: 450px;
+      height: 450px;
+      margin: 0 auto;
+      margin-top: -40px;
+      position: relative;
+      overflow: hidden;
+
+      &-bg {
+        width: 380px;
+        height: 380px;
+        position: absolute;
+        background: #2F6DCE;
+        border-radius: 47px;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+      }
+
+      img {
+        transform: rotate(45deg);
+        position: absolute;
+        left: -12%;
+        bottom: -18%;
+        max-width: 100%;
+      }
+    }
+
+    &__inner::before {
+      width: 654px;
+      height: 654px;
+      top: 1%;
+      left: -41%;
+    }
+
+    &__inner-rectangle1,
+    &__inner-rectangle2,
+    &__inner::after {
+      display: none;
+    }
+
+    &__rectangle {
+      width: auto;
+      height: auto;
+      top: 10%;
+      padding: 0;
+      z-index: 1;
+      left: 50%;
+      transform: rotate(-45deg) translateX(-50%);
+      transform-origin: left;
+    }
+
+    &__info {
+      margin-top: 140px;
+      max-width: inherit;
+      text-align: center;
+    }
+
+    &__info-btn {
+      margin-left: auto;
+      margin-right: auto;
+
+      &::after {
+        width: 35px;
+        height: 50px;
+        right: -49px;
+        top: -45px;
+      }
+    }
+
+    &__info-small {
+      max-width: inherit;
     }
   }
 }
@@ -586,7 +688,7 @@
     }
 
     &__cards {
-      margin-bottom: 30px;
+      margin-bottom: 0;
     }
 
     &__cards-title {
@@ -620,6 +722,54 @@
       text-align: center;
     }
   }
+
+  .calc {
+    &__img-mobile {
+      width: 280px;
+      height: 280px;
+      margin-top: -100px;
+
+      &-bg {
+        width: 230px;
+        height: 230px;
+      }
+    }
+
+    &__rectangle {
+      top: 3%;
+      &-inner {
+        width: 270px;
+        height: 270px;
+      }
+    }
+
+    &__info {
+      margin-top: 80px;
+    }
+
+    &__info-title {
+      font-size: 22px;
+      line-height: 26px;
+      margin-bottom: 15px;
+    }
+
+    &__info-text {
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 40px;
+    }
+
+    &__info-btn {
+      font-size: 16px;
+      padding: 19px 37px;
+      margin-bottom: 10px;
+    }
+
+    &__info-small {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -630,5 +780,19 @@
     right: 0px;
     top: -45px;
     transform: rotate(-40deg);
+  }
+
+  .calc__info-text {
+    max-width: 290px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .calc__info-btn::after {
+    width: 25px;
+    height: 37px;
+    right: 10%;
+    top: -90%;
+    transform: rotate(-61deg);
   }
 }

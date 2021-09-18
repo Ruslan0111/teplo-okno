@@ -451,7 +451,7 @@
   }
 
   &__cards {
-    margin-bottom: 56px;
+    margin-bottom: 16px;
   }
 
   &__cards-title {
@@ -465,7 +465,6 @@
     display: flex;
     flex-wrap: wrap;
     column-gap: 60px;
-    row-gap: 40px;
   }
 
   &__card {
@@ -476,6 +475,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    margin-bottom: 40px;
   }
 
   &__card-rectangles {
@@ -570,6 +570,189 @@
     font-size: 14px;
     line-height: 18px;
     color: $font-color1;
+  }
+}
+
+.calc {
+  background: rgba(21, 103, 233, 0.24);
+  position: relative;
+  
+
+  &__inner {
+    padding: 85px 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  &__inner::before {
+    content: '';
+    width: 540px;
+    height: 540px;
+    position: absolute;
+    left: 5%;
+    top: -50%;
+    border-radius: 50%;
+    background: rgba(98, 170, 255, 0.39);
+    filter: blur(250px);
+  }
+
+  &__inner::after {
+    content: '';
+    width: 654px;
+    height: 654px;
+    position: absolute;
+    left: 50%;
+    top: -10%;
+    background: rgba(98, 170, 255, 0.39);
+    filter: blur(250px);
+    border-radius: 50%;
+  }
+
+  &__img-mobile {
+    display: none;
+  }
+
+  &__inner-rectangle1 {
+    position: absolute;
+    left: 0;
+    bottom: -11%;
+    width: 330px;
+    height: 330px;
+    background: rgba(255, 255, 255, 0.16);
+    border-radius: 57px;
+    transform: rotate(-45deg);
+    transform-origin: right;
+    z-index: 1;
+  }
+
+  &__inner-rectangle2 {
+    position: absolute;
+    right: 0;
+    top: -8%;
+    width: 140px;
+    height: 140px;
+    background: rgba(255, 255, 255, 0.16);
+    border-radius: 36px;
+    transform: rotate(-45deg);
+    transform-origin: left;
+    z-index: 1;
+  }
+
+  &__info {
+    position: relative;
+    z-index: 5;
+    max-width: 455px;
+  }
+
+  &__info-title {
+    font-size: 32px;
+    line-height: 40px;
+    color: $font-color2;
+    margin-bottom: 15px;
+  }
+
+  &__info-text {
+    font-size: 18px;
+    line-height: 24px;
+    color: $font-color1;
+    margin-bottom: 57px;
+  }
+
+  &__info-btn {
+    padding: 24px 50px;
+    display: block;
+    margin-bottom: 18px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #005AE9;
+    box-shadow: 0px 22px 44px -12px #005AE9;
+    border-radius: 71px;
+    border: none;
+    font-size: 22px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 65px;
+      height: 93px;
+      background-image: url(../images/main-vector.svg);
+      background-position: center center;
+      background-size: cover;
+      right: -65px;
+      top: -80px;
+      transform: rotate(-27deg);
+    }
+
+    &:hover {
+      box-shadow: none;
+      background: #085ADB;
+    }
+  }
+
+  &__info-small {
+    text-align: center;
+    max-width: 365px;
+    font-size: 12px;
+    line-height: 14px;
+    color: $font-color1;
+  }
+
+  &__rectangle {
+    position: absolute;
+    width: 635px;
+    height: 635px;
+    top: -15%;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: inset 0px 0px 193px rgba(255, 255, 255, 0.19);
+    border-radius: 57px;
+    transform: rotate(-45deg);
+    padding: 90px;
+  }
+
+  &__rectangle-inner {
+    width: 440px;
+    height: 440px;
+    border-radius: 57px;
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  &__img {
+    left: 58%;
+    top: 0;
+    z-index: 5;
+    width: 435px;
+    height: 435px;
+    position: absolute;
+    border-radius: 47px;
+    transform: rotate(-45deg);
+    overflow: hidden;
+
+    img {
+      transform: rotate(45deg);
+      position: absolute;
+      bottom: -17%;
+      left: -12%;
+      // max-width: 100%;
+      display: block;
+    }
+
+    &-bg {
+      width: 400px;
+      height: 400px;
+      position: absolute;
+      background: #2F6DCE;
+      border-radius: 47px;
+      z-index: -1;
+      bottom: 0;
+      left: 0;
+    }
   }
 }
 
