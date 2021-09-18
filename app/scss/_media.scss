@@ -41,6 +41,9 @@
   }
 
   .about {
+    &__contacts {
+      padding: 30px 10px 30px 15px;
+    }
     &__more-btn {
       padding-left: 45px;
       padding-right: 45px;
@@ -445,6 +448,52 @@
 
     &__info-btn {
       margin: 0 auto;
+    }
+  }
+
+  .footer {
+    &__paragraph1 {
+      order: 2;
+      flex: 0 1 47%;
+    }
+    &__paragraph2 {
+      flex: 0 1 100%;
+      order: 1;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    &__paragraph3 {
+      order: 3;
+      flex: 0 1 47%;
+    }
+  }
+
+  .modal {
+    &__inner {
+      padding: 30px;
+    }
+
+    &__form {
+      padding: 30px;
+
+      input {
+        padding: 15px 30px;
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      button {
+        padding: 20px 50px;
+        font-size: 18px;
+      }
+    }
+
+    &__close {
+      top: 10px;
+      right: 10px;
+      span {
+        font-size: 16px;
+      }
     }
   }
 }
@@ -977,6 +1026,22 @@
 
     &__info-btn {
       font-size: 16px;
+    }
+  }
+
+  .modal {
+    &__inner {
+      padding: 30px;
+    }
+    &__form {
+      padding: 25px 20px;
+      box-shadow: 0px 0px 30px rgba(21, 103, 233, 0.24);
+
+      input {
+        padding: 15px 20px;
+        font-size: 15px;
+        margin-bottom: 20px;
+      }
     }
   }
 }

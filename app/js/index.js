@@ -3,8 +3,20 @@ window.onload = function() {
     document.querySelector('.header__menu').classList.add('active');
   });
 
-   document.querySelector('.header__menu-close').addEventListener('click', function() {
+  document.querySelector('.header__menu-close').addEventListener('click', function() {
     document.querySelector('.header__menu').classList.remove('active');
+  });
+
+  document.querySelectorAll('.main-btn').forEach(item => {
+    item .addEventListener('click', function() {
+      document.querySelector('.modal-bg').classList.add('active');
+      document.querySelector('.modal').classList.add('active');
+    });
+  })
+
+  document.querySelector('.modal__close').addEventListener('click', function() {
+    document.querySelector('.modal-bg').classList.remove('active');
+    document.querySelector('.modal').classList.remove('active');
   });
 
   let mainSlider1Menu = ['-10%', '-15%', '-20%', '-35%']

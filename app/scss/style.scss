@@ -30,10 +30,6 @@
     justify-content: space-between;
     flex: 0 1 70%;
     max-width: 755px;
-
-    // li + li {
-    //   margin-left: 47px;
-    // }
   }
 
   &__location {
@@ -58,9 +54,21 @@
     display: flex;
     align-items: center;
     color: #25CF43;
+    transition: all 0.3s ease;
 
     .icon-whatsapp {
       margin-right: 8px;
+      &::before {
+        transition: all 0.3s ease;
+      }
+    }
+
+    &:hover {
+      color: #fff;
+      background-color: #25CF43;
+      .icon-whatsapp::before {
+        color: #fff;
+      }
     }
   }
 
@@ -149,6 +157,8 @@
     font-size: 22px;
     text-transform: uppercase;
     position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
 
     &::after {
       content: '';
@@ -160,6 +170,11 @@
       background-size: cover;
       right: -110px;
       top: -80px;
+    }
+
+    &:hover {
+      color: #fff;
+      background-color: $color-blue;
     }
   }
 
@@ -832,6 +847,9 @@
 
     &.swiper-button-disabled {
       opacity: 0.5;
+      &:hover {
+        background-color: $color-blue;
+      }
     }
   }
 
@@ -923,6 +941,9 @@
 
       &.swiper-button-disabled {
         opacity: 0.5;
+        &:hover {
+           background: $color-blue;
+        }
       }
     }
 
@@ -987,7 +1008,6 @@
     width: 55px;
     height: 55px;
     border-radius: 5px;
-    // border: 2px solid red;
     background-color: $color-lightblue;
     display: flex;
     justify-content: center;
@@ -1056,10 +1076,22 @@
       justify-content: center;
       border-radius: 84px;
       padding: 14px 0;
+      transition: all 0.3s ease;
 
       span {
         margin-right: 8px;
         font-size: 16px;
+        &::before {
+          transition: all 0.3s ease;
+        }
+      }
+
+      &:hover {
+        color: #fff;
+        background-color: #25CF43;
+        .icon-whatsapp::before {
+          color: #fff;
+        }
       }
     }
   }
@@ -1122,6 +1154,10 @@
       padding: 14px 54px;
       margin-bottom: 12px;
       cursor: pointer;
+      transition: all 0.3s ease;
+      &:hover {
+        background-color: #1353b7;;
+      }
     }
 
     &-img {
@@ -1206,6 +1242,18 @@
       border: 1px solid $color-blue;
       border-radius: 6px;
       color: $color-blue;
+      transition: all 0.3s ease;
+
+      &::before {
+        transition: all 0.3s ease;
+      }
+
+      &:hover {
+        background-color: $color-blue;
+        &::before {
+          color: #fff;
+        }
+      }
     }
   }
 }
@@ -1345,6 +1393,146 @@
     &:hover {
       box-shadow: none;
       background: #085ADB;
+    }
+  }
+}
+
+.footer {
+  background-color: #172233;
+  padding: 35px 0;
+  color: #fff;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    p {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__paragraph1 {
+    flex: 0 1 20%;
+  }
+
+   &__paragraph2 {
+    flex: 0 1 50%;
+    text-align: center;
+  }
+
+   &__paragraph3 {
+    flex: 0 1 20%;
+    text-align: right;
+  }
+}
+
+.modal {
+  position: fixed;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  right: 0;
+  bottom: 0;
+  transition:  all 0.5s ease;
+  &.active {
+    left: 0;
+  }
+
+  &-bg {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 190;
+    background-color: rgba(0, 0, 0, 0.5);
+    &.active {
+      display: block;
+    }
+  }
+
+  &__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 50px;
+  }
+
+  &__form {
+    position: relative;
+    box-shadow: 0px 0px 78px rgba(21, 103, 233, 0.24);
+    border-radius: 6px;
+    padding:50px;
+    input {
+      display: block;
+      background-color: $color-lightblue;
+      border: 1px solid $color-blue;
+      border-radius: 94px;
+      color: $font-color2;
+      outline: none;
+      padding: 30px 60px;
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 25px;
+      &::placeholder {
+        color: $color-blue;
+      }
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+      font-size: 22px;
+      color: #fff;
+      text-transform: uppercase;
+      border: none;
+      padding: 24px 70px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #005AE9;
+      box-shadow: 0px 22px 44px -12px #005AE9;
+      border-radius: 71px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        box-shadow: none;
+        background-color: #085ADB;;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 110px;
+      height: 130px;
+      z-index: -1;
+      background-image: url(../images/form-bg.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    cursor: pointer;
+    top: 20px;
+    right: 20px;
+    span {
+      font-size: 20px;
+      &::before {
+        color: $color-blue;
+      }
     }
   }
 }
