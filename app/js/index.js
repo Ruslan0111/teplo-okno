@@ -65,4 +65,18 @@ window.onload = function() {
       bulletActiveClass: "special-orders__slider-pagination-bullet-active",
     },
   });
+
+  let aboutSlider = new Swiper(".about__content-slider", {
+    spaceBetween: 15,
+    navigation: {
+      nextEl: ".about__content-slider-button-next",
+      prevEl: ".about__content-slider-button-prev",
+    },
+    pagination: {
+      el: ".about__content-slider-pagination",
+      clickable: true,
+      bulletClass: "about__content-slider-pagination-bullet",
+      bulletActiveClass: "about__content-slider-pagination-bullet-active",
+    },
+  });
 };
