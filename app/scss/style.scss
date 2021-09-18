@@ -1210,4 +1210,143 @@
   }
 }
 
+.master {
+  padding-top: 55px;
+  background-color: #113671;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -60%;
+    left: 5%;
+    width: 540px;
+    height: 540px;
+    border-radius: 50%;
+    background: rgba(21, 103, 233, 0.41);
+    filter: blur(100px);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -60%;
+    left: 40%;
+    width: 540px;
+    height: 540px;
+    border-radius: 50%;
+    background: rgba(21, 103, 233, 0.41);
+    filter: blur(150px);
+  }
+
+  &__rectangle1 {
+    position: absolute;
+    right: 5%;
+    top: -25%;
+    width: 205px;
+    height: 205px;
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 36px;
+    transform: rotate(-45deg);
+  }
+
+  &__rectangle2 {
+    position: absolute;
+    right: 15%;
+    top: -13%;
+    width: 95px;
+    height: 95px;
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 14px;
+    transform: rotate(-45deg);
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__img {
+    flex: 0 1 40%;
+    padding-left: 100px;
+    position: relative;
+
+    img {
+      display: block;
+      max-width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -50%;
+      width: 515px;
+      height: 515px;
+      background: rgba(255, 255, 255, 0.09);
+      border-radius: 57px;
+      transform: rotate(-45deg);
+      z-index: 1;
+    }
+  }
+
+  &__info {
+    flex: 0 1 60%;
+    padding: 40px 0 40px 20px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+
+    &-title {
+      font-size: 32px;
+      line-height: 40px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__info-list {
+    margin-bottom: 40px;
+
+    li {
+      font-size: 18px;
+      line-height: 37px;
+      display: flex;
+      align-items: flex-start;
+
+      span {
+        font-size: 12px;
+        margin-top: 11px;
+        margin-right: 10px;
+
+        &::before {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &__info-btn {
+    padding: 24px 50px;
+    display: block;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #005AE9;
+    box-shadow: 0px 22px 44px -12px #005AE9;
+    border-radius: 71px;
+    border: none;
+    font-size: 22px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      box-shadow: none;
+      background: #085ADB;
+    }
+  }
+}
+
 @import "media";
